@@ -1,0 +1,17 @@
+# Core scientific stack
+numpy
+pandas
+torch
+statsmodels
+scikit-learn
+scipy
+matplotlib
+seaborn
+optuna
+scikit-posthocs
+
+# Data access
+kagglehub
+
+# Tooling
+jupyter
