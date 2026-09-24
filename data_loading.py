@@ -95,7 +95,7 @@ def clean_datasets():
     # ---------- store-sales ----------
     df = RAW["store-sales"].copy()
 
-    df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=True)  # confirm this against a few known rows
+    df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=True)
     daily_sales = df.groupby("Order Date")["Sales"].sum().sort_index()
     SERIES["store-sales"] = daily_sales
 
@@ -138,3 +138,11 @@ def clean_datasets():
 
 
     return SERIES
+
+def load_motor_temps():
+    load_datasets()
+
+    # ---------- motor-temp ----------
+    df = RAW["motor-temp"]
+
+    return df
